@@ -6,7 +6,6 @@
 # Usage:
 # Description: Copie recursive dossier et fichiers
 # ---------------------------------------------------------------------------
-
 #############################
 ### Package de travail
 #############################
@@ -17,10 +16,7 @@ from datetime import datetime
 #############################
 ### Foncion
 #############################
-
 #Copie recursive sous condition booléenne
-
-
 def copy(filename, source, destination):
     if not os.path.exists(destination):
         os.makedirs(destination)
@@ -37,7 +33,6 @@ def copy(filename, source, destination):
     else:
         shutil.copytree(from_path, to_path)
         print(' Fin de la copie du dossier ' + filename + ' dans '+to_path)
-
 
 #Parametre (dossier contenant les fichiers)
 source = r"C:\Users\Desktop\from_path"
@@ -57,6 +52,5 @@ copy(filename, source, destination)
 #fin du programme
 fin = datetime.now()
 
-print('la durée totale du téléchargement de toutes les fichiers est  ' +
-      str(fin-debut) + 's')
+print('la durée totale du traitement  ' + str(fin-debut) + 's')
 print('Fin du programme !')

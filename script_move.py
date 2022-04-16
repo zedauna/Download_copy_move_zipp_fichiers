@@ -6,7 +6,6 @@
 # Usage:
 # Description: Couper/Déplacer recursive dossier et fichiers
 # ---------------------------------------------------------------------------
-
 #############################
 ### Package de travail
 #############################
@@ -17,10 +16,7 @@ from datetime import datetime
 #############################
 ### Foncion
 #############################
-
 #copie recursive sous condition booléenne + nettoyage des fichiers de la source
-
-
 def move(from_path, to_path, filename):
    if not os.path.exists(destination):
        os.makedirs(destination)
@@ -40,7 +36,6 @@ def move(from_path, to_path, filename):
        if os.path.exists(to_path):
            shutil.rmtree(from_path, ignore_errors=True)
 
-
 #Parametre (dossier contenant les fichiers)
 source = r"C:\Users\Desktop\from_path"
 
@@ -59,6 +54,5 @@ move(filename, source, destination)
 #fin du programme
 fin = datetime.now()
 
-print('la durée totale du téléchargement de toutes les fichiers est  ' +
-      str(fin-debut) + 's')
+print('la durée totale du traitement est  ' +str(fin-debut) + 's')
 print('Fin du programme !')

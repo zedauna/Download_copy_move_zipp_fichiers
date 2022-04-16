@@ -6,7 +6,6 @@
 # Usage:
 # Description: Connexion , téléchargement des fichiers shapefiles
 # ---------------------------------------------------------------------------
-
 #############################
 ### Package de travail
 #############################
@@ -17,7 +16,6 @@ from datetime import datetime
 #############################
 ### Déclaration des variables
 #############################
-
 #Parametres du FTP (à remplir!)
 host = "geo-ftp.ongr.fr"
 adresseftp = "geo-ftp.ongr.fr"
@@ -31,10 +29,7 @@ dest_dir = r"C:\Users\Desktop\P2\download"
 #############################
 ### Fonctions
 #############################
-
 #connexion
-
-
 def ftp_connect(adresseftp, user, password, port_ftp):
   ftp = FTP()
   ftp.connect(adresseftp, port_ftp)
@@ -42,14 +37,11 @@ def ftp_connect(adresseftp, user, password, port_ftp):
   return ftp
 
 #fermeture
-
-
 def ftp_fermer(ftp):
   try:
     ftp.quit()
   except:
     ftp.close()
-
 
 #Debut du programme
 debut = datetime.now()
@@ -57,7 +49,6 @@ debut = datetime.now()
 #################################
 ### movie.zip
 #################################
-
 #ouverture de la session
 ftp = ftp_connect(adresseftp, user, password, port_ftp)
 start = datetime.now()
@@ -89,6 +80,5 @@ print('la durée de téléchargement est ' + str(diff.seconds) + 's')
 #fin du programme
 fin = datetime.now()
 
-print('la durée totale du téléchargement de toutes les fichiers est  ' +
-      str(fin-debut) + 's')
+print('la durée totale du traitement est  ' + str(fin-debut) + 's')
 print("Fin du programme !")

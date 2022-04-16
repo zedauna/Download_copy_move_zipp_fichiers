@@ -6,7 +6,6 @@
 # Usage:
 # Description: Décompression fichiers shapefiles zippés
 # ---------------------------------------------------------------------------
-
 #############################
 ### Package de travail
 #############################
@@ -38,5 +37,4 @@ with ZipFile(path_file_in, 'r') as zip:
   zip.close()
 
 print('Fin de décompression, le dossier ' + filename + ' est prét')
-
 print('Fin du programme !')
